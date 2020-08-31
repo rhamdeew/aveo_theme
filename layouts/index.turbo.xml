@@ -35,7 +35,7 @@
               <figure>
                   <img src="{{ .Site.BaseURL }}images/bg.jpg"/>
               </figure>
-              <h2>Блог владельца Infiniti EX35</h2>
+              <h2>Блог владельца Chevrolet Aveo</h2>
               <menu>
                   <a href="{{ .Site.BaseURL }}">На главную</a>
               </menu>
