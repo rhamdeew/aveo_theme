@@ -2,20 +2,27 @@
   <header>
     <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     <div class="post-meta clearfix">
-      <div class="post-date pull-left">
-        Опубликовано
+      <div class="post-date">
+        Опубликовано:
         <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
-          {{ .Date.Format "Jan 2, 2006" }}
+          {{ .Date.Format "02-01-2006" }}
         </time>
       </div>
+      {{ if (or (isset .Params "cost") (isset .Params "mileage")) }}
+        <div class="post-params">
+        {{ with .Params.cost }}
+          <div class="post-cost">
+            Потрачено: {{ . }} руб.
+          </div>
+        {{ end  }}
+        {{ with .Params.mileage }}
+          <div class="post-mileage">
+            Пробег: {{ . }} км.
+          </div>
+        {{ end  }}
+        </div>
+      {{ end }}
     </div>
-    {{ with .Params.cost }}
-    <div class="post-meta clearfix">
-      <div class="post-cost pull-left">
-        Потрачено: {{ . }} руб.
-      </div>
-    </div>
-    {{ end  }}
   </header>
   <div class="article_summary">
     {{ .Summary }}

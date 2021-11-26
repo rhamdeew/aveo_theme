@@ -140,8 +140,18 @@ a.btn-back {
     margin: 5px 0;
 }
 
-.post-date {
+.post-date, .post-cost, .post-mileage {
     color: rgba(0, 0, 0, 0.4);
+}
+
+.post-tags {
+    margin-bottom: 20px;
+}
+.post-params {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
 }
 
 .post-tag a {
